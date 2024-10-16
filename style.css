@@ -1,0 +1,258 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('386741.jpg'); /* Specify the path to your image */
+    background-size: cover; /* Make sure the image covers the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: #333;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ffffff;
+    color: #000000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 10px;
+    z-index: 1000;
+    border-color:#ffffff;
+    border-style:solid;
+    border-radius:50px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap:140px;
+}
+nav ul li {
+    margin: 0 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-size: 25px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+    color:red;
+    transition:0.3s;
+}
+/* Section Styling */
+section {
+    padding: 100px 0;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    position: relative;
+    animation: slide-in 1s ease-out;
+    color:white;
+}
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fade-in 1.5s ease-in;
+}
+strong {
+    color:red;
+}
+/* Members Section */
+#members {
+    background: #000000;
+    padding: 60px 0;
+    border-style:solid;
+    border-radius:50px;
+}
+.members {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+#members h2 {
+    margin-top:20px;
+}
+.member {
+    background: #f9f9f9;
+    padding: 20px;
+    width: 250px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+.member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+.member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+.member:hover img {
+    transform: scale(1.1);
+}
+
+.member p {
+    font-size:18px;
+    color: #666;
+    margin-top:10px;
+}
+.upper {
+    font-size:20px;
+}
+/* Project Section */
+#project {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin-top: 40px;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(40px); /* Set it off-screen slightly */
+    transition: all 1.5s ease-out; /* Apply a transition */
+}
+
+#project.show {
+    opacity: 1; /* Fully visible when scrolled into view */
+    transform: translateY(0); /* Move it to its final position */
+}
+
+#project p {
+    color: #ffffff;
+    font-size: 1.2rem;
+    background: linear-gradient(45deg, #000000, #1a1a1a);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(255, 0, 255, 0.3);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
+    word-spacing: 4px; /* Add more space between words */
+}
+
+
+#project h2 {
+    color: black;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    font-size:30px;
+    margin-top:20px;
+}
+
+#project h3 {
+    font-size: 27px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* X-offset, Y-offset, Blur, Spread, Color */
+    padding: 10px; /* Optional: To add some space around the text */
+    display: inline-block; /* Keeps the shadow tight around the text */
+    margin-top:20px;
+}
+
+
+/* Keyframe Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Buttons for section links */
+section a {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+
+.sec1-btn {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .sec1-btn::before {
+    margin-left: auto;
+  }
+  
+  .sec1-btn::after,.sec1-btn::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    transition: 0.5s;
+  }
+  
+  .sec1-btn:hover::after,.sec1-btn:hover::before {
+    width: 100%;
+  }
+/* Animations */
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.sec2-btn {
+color:black;
+}
