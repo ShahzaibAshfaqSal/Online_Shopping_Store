@@ -137,15 +137,8 @@ strong {
     text-align: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    opacity: 0; /* Initially hidden */
-    transform: translateY(40px); /* Set it off-screen slightly */
-    transition: all 1.5s ease-out; /* Apply a transition */
 }
 
-#project.show {
-    opacity: 1; /* Fully visible when scrolled into view */
-    transform: translateY(0); /* Move it to its final position */
-}
 
 #project p {
     color: #ffffff;
